@@ -1,0 +1,15 @@
+D:\James.Weixin\src\test\bin\Debug\netcoreapp3.1\test.exe
+D:\James.Weixin\src\test\bin\Debug\netcoreapp3.1\test.deps.json
+D:\James.Weixin\src\test\bin\Debug\netcoreapp3.1\test.runtimeconfig.json
+D:\James.Weixin\src\test\bin\Debug\netcoreapp3.1\test.runtimeconfig.dev.json
+D:\James.Weixin\src\test\bin\Debug\netcoreapp3.1\test.dll
+D:\James.Weixin\src\test\bin\Debug\netcoreapp3.1\test.pdb
+D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.csprojAssemblyReference.cache
+D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.csproj.CoreCompileInputs.cache
+D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.AssemblyInfoInputs.cache
+D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.AssemblyInfo.cs
+D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.dll
+D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.pdb
+D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.genruntimeconfig.cache
+D:\James.Weixin\src\test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.csproj.CopyComplete
