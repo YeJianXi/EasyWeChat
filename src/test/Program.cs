@@ -20,9 +20,18 @@ namespace test
         {
             HttpClient client = new HttpClient();
             GetAccessToken(client).Wait();
-            GetTempQRCodeTest(client);
+            LongUriToShortUriTest(client);
 
         }
+
+        static void LongUriToShortUriTest(HttpClient client)
+        {
+            AccountManager accountManager = new AccountManager(client);
+            var request = new CreateTempQRStrSceneCodeRequest();
+            request.SetScene("oneguiidsdjfkldsj");
+            var response = accountManager.LongUriToShortUri("http://www.baidu.com",accessToken).GetAwaiter().GetResult();
+        }
+
 
         static void GetTempQRCodeTest(HttpClient client)
         {
