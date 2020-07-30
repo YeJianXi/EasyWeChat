@@ -1,0 +1,9 @@
+D:\James.Weixin\src\sdk\bin\Debug\netstandard2.0\sdk.deps.json
+D:\James.Weixin\src\sdk\bin\Debug\netstandard2.0\sdk.dll
+D:\James.Weixin\src\sdk\obj\Debug\netstandard2.0\sdk.csprojAssemblyReference.cache
+D:\James.Weixin\src\sdk\obj\Debug\netstandard2.0\sdk.AssemblyInfoInputs.cache
+D:\James.Weixin\src\sdk\obj\Debug\netstandard2.0\sdk.AssemblyInfo.cs
+D:\James.Weixin\src\sdk\bin\Debug\netstandard2.0\sdk.pdb
+D:\James.Weixin\src\sdk\obj\Debug\netstandard2.0\sdk.csproj.CoreCompileInputs.cache
+D:\James.Weixin\src\sdk\obj\Debug\netstandard2.0\sdk.dll
+D:\James.Weixin\src\sdk\obj\Debug\netstandard2.0\sdk.pdb

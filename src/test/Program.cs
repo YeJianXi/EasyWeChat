@@ -6,6 +6,9 @@ using  Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Security.Cryptography;
 using System.Text;
+using test;
+using sdk;
+using sdk.Model;
 
 namespace test
 {
@@ -14,24 +17,28 @@ namespace test
         static string accesToken;
         static void Main(string[] args)
         {
+            HttpClient client = new HttpClient();
+            GetAccessToken(client).Wait();
+            TemplateManager templateManager = new TemplateManager(client);
+            TemplateListResponse templates =   templateManager.GetTemplates(accesToken).GetAwaiter().GetResult();
+  
+            GetTempQRCode(client).Wait();
+        }
+
+        public void HashTest()
+        {
             SHA1 sha1 = SHA1.Create();
             byte[] sha1str = sha1.ComputeHash(Encoding.Default.GetBytes("abfdasfsafc"));//160位
             SHA256 sha256 = SHA256.Create();
             byte[] sha256str = sha256.ComputeHash(Encoding.Default.GetBytes("abfdasfsafc"));//256位
             MD5 md5 = MD5.Create();
-           byte[] md5str =  md5.ComputeHash(Encoding.Default.GetBytes("abfdasfsafc"));//128位
+            byte[] md5str = md5.ComputeHash(Encoding.Default.GetBytes("abfdasfsafc"));//128位
             HMAC hmacmd5 = new HMACMD5();
             byte[] hmacmd5str = hmacmd5.ComputeHash(Encoding.Default.GetBytes("abfdasfsafc"));//128位
             HMAC hmacmd5k = new HMACMD5(Encoding.Default.GetBytes("happy"));
             byte[] hmacmd5kstr = hmacmd5k.ComputeHash(Encoding.Default.GetBytes("abfdasfsafc"));//
 
             string tmp = 12.ToString("x2");
-
-       
-            //Console.WriteLine(hashValue);
-            //HttpClient client = new HttpClient();
-            //GetAccessToken(client).Wait();
-            //GetTempQRCode(client).Wait();
         }
 
         static async Task GetAccessToken(HttpClient client)

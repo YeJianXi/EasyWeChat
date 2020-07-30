@@ -2,10 +2,10 @@ using System.Net.Http;
 
 namespace sdk
 {
-    public class UserManage
+    public class UserManager
     {
         HttpClient client;
-        public UserManage(HttpClient client)
+        public UserManager(HttpClient client)
         {
             
         }

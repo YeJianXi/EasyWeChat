@@ -13,3 +13,5 @@ D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.pdb
 D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.genruntimeconfig.cache
 D:\James.Weixin\src\test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\James.Weixin\src\test\obj\Debug\netcoreapp3.1\test.csproj.CopyComplete
+D:\James.Weixin\src\test\bin\Debug\netcoreapp3.1\sdk.dll
+D:\James.Weixin\src\test\bin\Debug\netcoreapp3.1\sdk.pdb

@@ -10,6 +10,19 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
+      },
+      "sdk/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "bin/placeholder/sdk.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/sdk.dll": {}
+        }
       }
     }
   },
@@ -44,11 +57,17 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "sdk/1.0.0": {
+      "type": "project",
+      "path": "../sdk/sdk.csproj",
+      "msbuildProject": "../sdk/sdk.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "newtonsoft.json >= 12.0.3"
+      "newtonsoft.json >= 12.0.3",
+      "sdk >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -81,7 +100,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\James.Weixin\\src\\sdk\\sdk.csproj": {
+              "projectPath": "D:\\James.Weixin\\src\\sdk\\sdk.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

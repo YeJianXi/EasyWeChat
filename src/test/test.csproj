@@ -9,4 +9,8 @@
     <PackageReference Include="newtonsoft.json" Version="12.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\sdk\sdk.csproj" />
+  </ItemGroup>
+
 </Project>
