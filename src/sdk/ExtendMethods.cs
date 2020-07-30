@@ -24,7 +24,6 @@ namespace sdk
             return $"#{R}{G}{B}";
         }
 
-
         /// <summary>
         /// 将响应结果中的Body Json串进行序列化为对象
         /// </summary>

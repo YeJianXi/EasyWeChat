@@ -15,14 +15,34 @@ namespace test
 {
     class Program
     {
-        static string accesToken;
+        static string accessToken;
         static void Main(string[] args)
         {
             HttpClient client = new HttpClient();
             GetAccessToken(client).Wait();
+            GetTempQRCodeTest(client);
+
+        }
+
+        static void GetTempQRCodeTest(HttpClient client)
+        {
+            AccountManager accountManager = new AccountManager(client);
+            var request = new CreateTempQRStrSceneCodeRequest();
+            request.SetScene("oneguiidsdjfkldsj");
+           var response =  accountManager.GetTempQRCode(accessToken,request).GetAwaiter().GetResult();
+        }
+
+        static void DeleteTemplateTest(HttpClient client)
+        {
             TemplateManager templateManager = new TemplateManager(client);
-            TemplateListResponse templates = templateManager.GetTemplates(accesToken).GetAwaiter().GetResult();
-            bool del = templateManager.DeleteTemplate(accesToken, "").GetAwaiter().GetResult();
+            TemplateListResponse templates = templateManager.GetTemplates(accessToken).GetAwaiter().GetResult();
+            bool del = templateManager.DeleteTemplate(accessToken, "").GetAwaiter().GetResult();
+
+        }
+
+        static void SendTemplateTest(HttpClient client)
+        {
+            TemplateManager templateManager = new TemplateManager(client);
             SendTemplateRequest sendTemplateRequest = new SendTemplateRequest("ozS7j1XjseWWqzDkodixV3WvLWAY", "DN_bgsKpQVkKS45FbRDnm8ke6oqMTbLsxBjtJ07xCEs");
             sendTemplateRequest.Url = "https://www.baidu.com";
             sendTemplateRequest.SetData(new TemplateDataFiled[] {
@@ -32,7 +52,9 @@ namespace test
                     Color =  Color.Red
                  }
             });
-            SendTemplateResponse response = templateManager.SendAsync(accesToken, sendTemplateRequest).GetAwaiter().GetResult();
+            SendTemplateResponse response = templateManager.SendAsync(accessToken, sendTemplateRequest).GetAwaiter().GetResult();
+
+
         }
 
         public void HashTest()
@@ -59,28 +81,9 @@ namespace test
             string url = $"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={appId}&secret={secret}";
             var response = await client.GetAsync(url);
             string json = await response.Content.ReadAsStringAsync();
-            accesToken = JObject.Parse(json).Value<string>("access_token");
-            Console.WriteLine(accesToken);
+            accessToken = JObject.Parse(json).Value<string>("access_token");
+            Console.WriteLine(accessToken);
         }
-        static async Task GetTempQRCode(HttpClient client)
-        {
-            string url = $"https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token={accesToken}";
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            param["expire_seconds"] = 604800;
-            param["action_name"] = "QR_STR_SCENE";
-            param["action_info"] = new
-            {
-                scene = new
-                {
-                    scene_str = "test"
-
-                }
-            };
-
-            HttpContent content = new StringContent(JsonConvert.SerializeObject(param));
-            var response = await client.PostAsync(url, content);
-            string json = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(json);
-        }
+  
     }
 }

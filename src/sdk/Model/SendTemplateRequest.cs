@@ -90,7 +90,7 @@ namespace sdk.Model
             }
         }
 
-        public string ToJson()
+        internal string ToJson()
         {
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(root);
             return json;
