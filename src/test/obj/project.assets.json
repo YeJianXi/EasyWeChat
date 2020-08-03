@@ -11,17 +11,17 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "sdk/1.0.0": {
+      "WeChatSDK/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
-          "bin/placeholder/sdk.dll": {}
+          "bin/placeholder/WeChatSDK.dll": {}
         },
         "runtime": {
-          "bin/placeholder/sdk.dll": {}
+          "bin/placeholder/WeChatSDK.dll": {}
         }
       }
     }
@@ -58,7 +58,7 @@
         "packageIcon.png"
       ]
     },
-    "sdk/1.0.0": {
+    "WeChatSDK/1.0.0": {
       "type": "project",
       "path": "../sdk/sdk.csproj",
       "msbuildProject": "../sdk/sdk.csproj"
@@ -66,8 +66,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "newtonsoft.json >= 12.0.3",
-      "sdk >= 1.0.0"
+      "WeChatSDK >= 1.0.0",
+      "newtonsoft.json >= 12.0.3"
     ]
   },
   "packageFolders": {

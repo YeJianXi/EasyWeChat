@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace sdk.Model
+namespace WeChat.Model
 {
     /// <summary>
     /// 临时二维码请求参数
@@ -40,6 +40,7 @@ namespace sdk.Model
     {
         public CreateTempQRStrSceneCodeRequest(int expire_seconds = 30) : base(expire_seconds)
         {
+            root["action_name"] = "QR_STR_SCENE";
         }
 
 
@@ -64,6 +65,7 @@ namespace sdk.Model
     {
         public CreateTempQRIntSceneCodeRequest(int expire_seconds = 30) : base(expire_seconds)
         {
+            root["action_name"] = "QR_SCENE";
         }
 
 

@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using sdk.Model;
+using WeChat.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sdk
+namespace WeChat
 {
     /// <summary>
     /// 模板消息管理者

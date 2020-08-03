@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Web;
-namespace sdk.Model
+namespace WeChat.Model
 {
     public class CreateQRCodeResponse
     {

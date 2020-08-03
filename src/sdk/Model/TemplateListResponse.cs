@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml.Linq;
 
-namespace sdk.Model
+namespace WeChat.Model
 {
     public class TemplateListResponse
     {

@@ -7,21 +7,28 @@ using Newtonsoft.Json;
 using System.Security.Cryptography;
 using System.Text;
 using test;
-using sdk;
-using sdk.Model;
+using WeChat;
+using WeChat.Model;
 using System.Drawing;
 
 namespace test
 {
     class Program
     {
+
+        static readonly string appId = "wx0fc4ee9e61fbabd6";
+        static readonly string secret = "759081f722cdc7205b294db83b6b9937";
         static string accessToken;
         static void Main(string[] args)
         {
             HttpClient client = new HttpClient();
-            GetAccessToken(client).Wait();
-            LongUriToShortUriTest(client);
-
+            AccessTokenManager accessTokenManager = new AccessTokenManager(client,appId,secret);
+           _ =  accessTokenManager.StartTimingGetToken((token)=> {
+               accessToken = token;
+               SendTemplateTest(client);
+           });
+     
+            Console.ReadKey();
         }
 
         static void LongUriToShortUriTest(HttpClient client)
@@ -29,7 +36,7 @@ namespace test
             AccountManager accountManager = new AccountManager(client);
             var request = new CreateTempQRStrSceneCodeRequest();
             request.SetScene("oneguiidsdjfkldsj");
-            var response = accountManager.LongUriToShortUri("http://www.baidu.com",accessToken).GetAwaiter().GetResult();
+            var response = accountManager.LongUriToShortUri("http://www.baidu.com", accessToken).GetAwaiter().GetResult();
         }
 
 
@@ -38,7 +45,7 @@ namespace test
             AccountManager accountManager = new AccountManager(client);
             var request = new CreateTempQRStrSceneCodeRequest();
             request.SetScene("oneguiidsdjfkldsj");
-           var response =  accountManager.GetTempQRCode(accessToken,request).GetAwaiter().GetResult();
+            var response = accountManager.GetTempQRCode(accessToken, request).GetAwaiter().GetResult();
         }
 
         static void DeleteTemplateTest(HttpClient client)
@@ -82,17 +89,6 @@ namespace test
             string tmp = 12.ToString("x2");
         }
 
-        static async Task GetAccessToken(HttpClient client)
-        {
-            // {"access_token":"35_Kfc59VZI3rio3gSU6R_m0WKiq0EtILksW5igwkT4s0sYKGttSjtABEjewV-Aj0ZIic7ijDjrOIqKxKY_6KjOp5lc6Wn1NPJJ5vXtGNarJivhf8IIy4PilEl1cV0BxCnl1enzBU_0AZPr4fQBQDFjACAVIK","expires_in":7200}
-            string appId = "wx0fc4ee9e61fbabd6";
-            string secret = "759081f722cdc7205b294db83b6b9937";
-            string url = $"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={appId}&secret={secret}";
-            var response = await client.GetAsync(url);
-            string json = await response.Content.ReadAsStringAsync();
-            accessToken = JObject.Parse(json).Value<string>("access_token");
-            Console.WriteLine(accessToken);
-        }
-  
+
     }
 }

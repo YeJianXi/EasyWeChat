@@ -1,6 +1,6 @@
 using System.Net.Http;
 
-namespace sdk
+namespace WeChat
 {
     public class UserManager
     {

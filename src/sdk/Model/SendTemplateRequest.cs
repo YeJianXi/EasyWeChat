@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-namespace sdk.Model
+namespace WeChat.Model
 {
     public class TemplateDataFiled
     {

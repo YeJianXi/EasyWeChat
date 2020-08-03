@@ -1,4 +1,4 @@
-﻿using sdk.Model;
+﻿using WeChat.Model;
 using System;
 using System.Collections.Generic;
 using System.Net.Cache;
@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sdk
+namespace WeChat
 {
     public class AccountManager
     {

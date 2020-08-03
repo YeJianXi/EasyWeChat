@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace sdk.Model
+namespace WeChat.Model
 {
     /// <summary>
     /// 返回码 说明

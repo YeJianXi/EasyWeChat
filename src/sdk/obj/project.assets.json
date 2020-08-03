@@ -227,7 +227,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "D:\\James.Weixin\\src\\sdk\\sdk.csproj",
-      "projectName": "sdk",
+      "projectName": "WeChatSDK",
       "projectPath": "D:\\James.Weixin\\src\\sdk\\sdk.csproj",
       "packagesPath": "C:\\Users\\James\\.nuget\\packages\\",
       "outputPath": "D:\\James.Weixin\\src\\sdk\\obj\\",
