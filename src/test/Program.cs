@@ -27,7 +27,7 @@ namespace test
                accessToken = token;
                SendTemplateTest(client);
            });
-     
+           Color color =   "#ff0000".ToColor();
             Console.ReadKey();
         }
 

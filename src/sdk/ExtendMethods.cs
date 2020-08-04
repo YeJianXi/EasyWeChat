@@ -8,8 +8,30 @@ using System.Threading.Tasks;
 
 namespace WeChat
 {
-    internal static class ExtendMethods
+    public static class ExtendMethods
     {
+
+        /// <summary>
+        /// 将16进制颜色表示字符串转为color对象
+        /// </summary>
+        /// <param name="colorStr">格式必须为#ffffff</param>
+        /// <returns></returns>
+        public static Color ToColor(this string colorStr)
+        {
+            if (string.IsNullOrEmpty(colorStr))
+            {
+                return Color.Black;
+            }
+            string r = colorStr.Substring(1, 2);
+            string g = colorStr.Substring(3, 2);
+            string b = colorStr.Substring(5, 2);
+            int rint = Convert.ToInt32(r, 16);
+            int gint = Convert.ToInt32(g, 16);
+            int bint = Convert.ToInt32(b, 16);
+            return Color.FromArgb(rint, gint, bint);
+
+        }
+
 
         /// <summary>
         /// 取到Color的RGB转为16进制表示
@@ -23,6 +45,10 @@ namespace WeChat
             var G = color.G.ToString("x2");
             return $"#{R}{G}{B}";
         }
+
+
+
+
 
         /// <summary>
         /// 将响应结果中的Body Json串进行序列化为对象
