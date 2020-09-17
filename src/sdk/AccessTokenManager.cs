@@ -52,7 +52,7 @@ namespace WeChat
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public async Task StartTimingGetToken(Action<string> getAccesstoken)
+        public async Task StartTimingGetToken(Action<string> getAccesstoken,int? second=null)
         {
             if (this.getTokenTimer != null)
             {
@@ -60,7 +60,7 @@ namespace WeChat
             }
             var token = await GetToken();
             getAccesstoken(token.access_token);
-            int period = token.expires_in * 1000;
+            int period = second ?? token.expires_in * 1000;
             this.getTokenTimer = new Timer(async (obj) =>
             {
                 token = await GetToken();

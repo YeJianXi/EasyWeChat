@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1qpWN4rM9gkgP8Sy+DlkYX6gjT41FzW2Af5jqC4MeCVyXlDRQtwo0f4/ZkfAP15veTGkoa/+3hU7rm/hnxQs7w==",
+  "dgSpecHash": "Q1TvkjSo43aU47czi4mWgg3HRaJfwHKPDDVu+n1LfKvUj3RQk3ankECzKhgen4f7D/ffd2DdakQMXd9DKbIRhw==",
   "success": true,
-  "projectFilePath": "D:\\James.Weixin\\src\\test\\test.csproj",
+  "projectFilePath": "C:\\Users\\James\\project\\github\\EasyWeChat\\src\\test\\test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\James\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],

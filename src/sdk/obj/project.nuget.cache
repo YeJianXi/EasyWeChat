@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "svM74Dej599pv/MOOSxO/rYqtZ1J3e63VpiROtPXhRH5lKRPaxOn1koYOHS3sjKVCCutXxDkNVCeuGPHI4bXRw==",
+  "dgSpecHash": "tpvUd+tOIhEXryqGuTNs13dHKu8ivUFkEJxjZ40qHsct+ceF248Uxl7912opsWR3XYGLhUGzTl2RgzM2upXkmw==",
   "success": true,
-  "projectFilePath": "D:\\James.Weixin\\src\\sdk\\sdk.csproj",
+  "projectFilePath": "C:\\Users\\James\\project\\github\\EasyWeChat\\src\\sdk\\sdk.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\James\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\James\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\James\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []

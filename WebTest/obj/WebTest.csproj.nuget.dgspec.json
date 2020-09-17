@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "D:\\James.Weixin\\WebTest\\WebTest.csproj": {}
+    "C:\\Users\\James\\project\\github\\EasyWeChat\\WebTest\\WebTest.csproj": {}
   },
   "projects": {
-    "D:\\James.Weixin\\WebTest\\WebTest.csproj": {
+    "C:\\Users\\James\\project\\github\\EasyWeChat\\WebTest\\WebTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\James.Weixin\\WebTest\\WebTest.csproj",
+        "projectUniqueName": "C:\\Users\\James\\project\\github\\EasyWeChat\\WebTest\\WebTest.csproj",
         "projectName": "WebTest",
-        "projectPath": "D:\\James.Weixin\\WebTest\\WebTest.csproj",
+        "projectPath": "C:\\Users\\James\\project\\github\\EasyWeChat\\WebTest\\WebTest.csproj",
         "packagesPath": "C:\\Users\\James\\.nuget\\packages\\",
-        "outputPath": "D:\\James.Weixin\\WebTest\\obj\\",
+        "outputPath": "C:\\Users\\James\\project\\github\\EasyWeChat\\WebTest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\James\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -25,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://192.168.113.11:10888/nuget": {},
+          "http://192.168.31.11:10888/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
