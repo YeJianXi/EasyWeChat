@@ -7,3 +7,12 @@ D:\James.Weixin\src\sdk\obj\release\netstandard2.0\sdk.AssemblyInfoInputs.cache
 D:\James.Weixin\src\sdk\obj\release\netstandard2.0\sdk.AssemblyInfo.cs
 D:\James.Weixin\src\sdk\obj\release\netstandard2.0\sdk.dll
 D:\James.Weixin\src\sdk\obj\release\netstandard2.0\sdk.pdb
+C:\Users\James\project\github\EasyWeChat\src\sdk\bin\release\netstandard2.0\sdk.deps.json
+C:\Users\James\project\github\EasyWeChat\src\sdk\bin\release\netstandard2.0\sdk.dll
+C:\Users\James\project\github\EasyWeChat\src\sdk\bin\release\netstandard2.0\sdk.pdb
+C:\Users\James\project\github\EasyWeChat\src\sdk\obj\release\netstandard2.0\sdk.csprojAssemblyReference.cache
+C:\Users\James\project\github\EasyWeChat\src\sdk\obj\release\netstandard2.0\sdk.AssemblyInfoInputs.cache
+C:\Users\James\project\github\EasyWeChat\src\sdk\obj\release\netstandard2.0\sdk.AssemblyInfo.cs
+C:\Users\James\project\github\EasyWeChat\src\sdk\obj\release\netstandard2.0\sdk.csproj.CoreCompileInputs.cache
+C:\Users\James\project\github\EasyWeChat\src\sdk\obj\release\netstandard2.0\sdk.dll
+C:\Users\James\project\github\EasyWeChat\src\sdk\obj\release\netstandard2.0\sdk.pdb

@@ -60,7 +60,7 @@ namespace WeChat
             }
             var token = await GetToken();
             getAccesstoken(token.access_token);
-            int period = second ?? token.expires_in * 1000;
+            int period = (second ?? token.expires_in) * 1000;
             this.getTokenTimer = new Timer(async (obj) =>
             {
                 token = await GetToken();
