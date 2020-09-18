@@ -59,14 +59,22 @@ namespace WeChat
         /// <returns></returns>
         internal static async Task<T> GetAsync<T>(this HttpClient client, string requestUri) where T : class
         {
-            var response = await client.GetAsync(requestUri);
-            if (response.IsSuccessStatusCode)
+            try
             {
+                var response = await client.GetAsync(requestUri);
                 string body = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<T>(body);
+                if (response.IsSuccessStatusCode)
+                {
+                    return JsonConvert.DeserializeObject<T>(body);
+                }
+                else
+                {
+                    Console.WriteLine(body);
+                    return null;
+                }
             }
-            else
-            {
+            catch (Exception ex) {
+                Console.WriteLine(ex);
                 return null;
             }
 

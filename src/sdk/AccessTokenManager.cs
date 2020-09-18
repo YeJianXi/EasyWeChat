@@ -46,27 +46,48 @@ namespace WeChat
             return response;
         }
 
+        public async Task<GetTicketResponse> GetTicket(string accessToken)
+        {
+            string url = $"https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token={accessToken}&type=jsapi";
+            GetTicketResponse response = await this._client.GetAsync<GetTicketResponse>(url);
+            return response;
+        }
+
 
         /// <summary>
         /// 开启定时获取AccessToken，如果开启该功能，请确保当前实例为单例
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public async Task StartTimingGetToken(Action<string> getAccesstoken,int? second=null)
-        {
-            if (this.getTokenTimer != null)
-            {
-                return;
-            }
-            var token = await GetToken();
-            getAccesstoken(token.access_token);
-            int period = (second ?? token.expires_in) * 1000;
+        public void StartTimingGetToken(Action<StartTimingGetTokenOutput> excute,int? second=null)
+        { 
+            int period = (second ?? 7200) * 1000;
             this.getTokenTimer = new Timer(async (obj) =>
             {
-                token = await GetToken();
-                getAccesstoken(token.access_token);
+                try
+                {
 
-            }, null, period, period);
+                    var token = await GetToken();
+                    if (token == null)
+                    {
+                        throw new Exception("获取不到accessToken");
+                    }
+                    var ticket = await GetTicket(token.access_token);
+                    if (ticket == null)
+                    {
+                        throw new Exception("获取不到jsapiticket");
+                    }
+                    excute(new StartTimingGetTokenOutput()
+                    {
+                        AccessToken = token.access_token,
+                        JSAPITicket = ticket.ticket
+                    });
+                }
+                catch (Exception ex) {
+                    Console.WriteLine(ex);
+                }
+
+            }, null, 0, period);
         }
 
     }

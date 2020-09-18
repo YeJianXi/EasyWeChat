@@ -22,12 +22,13 @@ namespace test
         static void Main(string[] args)
         {
             HttpClient client = new HttpClient();
-            AccessTokenManager accessTokenManager = new AccessTokenManager(client,appId,secret);
-           _ =  accessTokenManager.StartTimingGetToken((token)=> {
-               accessToken = token;
-               SendTemplateTest(client);
-           });
-           Color color =   "#ff0000".ToColor();
+            AccessTokenManager accessTokenManager = new AccessTokenManager(client, appId, secret);
+             accessTokenManager.StartTimingGetToken((output) =>
+            {
+                Console.WriteLine(output.AccessToken);
+                Console.WriteLine(output.JSAPITicket);
+            },60*10);
+            Color color = "#ff0000".ToColor();
             Console.ReadKey();
         }
 
