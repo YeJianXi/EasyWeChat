@@ -16,18 +16,20 @@ namespace test
     class Program
     {
 
-        static readonly string appId = "wx0fc4ee9e61fbabd6";
-        static readonly string secret = "759081f722cdc7205b294db83b6b9937";
+        static readonly string appId = "";//"wxeefc53a3617746e2";
+        static readonly string secret = "";//"54c29b72683aa64ffbf2309586027ca8";
         static string accessToken;
         static void Main(string[] args)
         {
             HttpClient client = new HttpClient();
             AccessTokenManager accessTokenManager = new AccessTokenManager(client, appId, secret);
-             accessTokenManager.StartTimingGetToken((output) =>
-            {
-                Console.WriteLine(output.AccessToken);
-                Console.WriteLine(output.JSAPITicket);
-            },60*10);
+
+            Console.WriteLine(accessTokenManager.GetTicket("37_Nn3EdNX18DS7AGeUsrlSlGKNZpHCpE6hefXWX43ZpZBst2IAaRp0Grqa73iiIwcwjlQuN3RRN0ClEONLJlNW-cKvfXIziuuJL8oXz3FdPUvLgWqk1Dgbke76pHyPvjnUw80QSQCOmQAOS0YxMMPdCGAPPS").GetAwaiter().GetResult().ticket);
+            // accessTokenManager.StartTimingGetToken((output) =>
+            //{
+            //    Console.WriteLine(output.AccessToken);
+            //    Console.WriteLine(output.JSAPITicket);
+            //},60*10);
             Color color = "#ff0000".ToColor();
             Console.ReadKey();
         }

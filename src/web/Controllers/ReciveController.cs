@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
 using System.Text;
 using Microsoft.VisualBasic;
-
+using WeChat.Utilities;
 namespace web.Controllers
 {
 
@@ -22,9 +22,15 @@ namespace web.Controllers
             string timestamp = Request.Query["timestamp"].ToString();
             string nonce = Request.Query["nonce"].ToString(); ;
             string echostr = Request.Query["echostr"].ToString();
-            string[] arr = new string[3] {token,timestamp,nonce };
-             Array.Sort(arr);
-            if (CheckSignature(string.Join("",arr), signature))
+            if (Signature.ServerValidate(new WeChat.Model.ServerValidateParams()
+            {
+                echostr = echostr,
+                signature = signature,
+                nonce = nonce,
+                timestamp = timestamp,
+                token = token
+            })
+            )
             {
                 return Content(echostr);
             }
@@ -35,25 +41,5 @@ namespace web.Controllers
 
         }
 
-        bool CheckSignature(string param, string signature)
-        {
-            SHA1 sha1 = SHA1.Create();
-            byte[] sha1str = sha1.ComputeHash(Encoding.UTF8.GetBytes(param));
-            StringBuilder sb = new StringBuilder();
-            foreach (var item in sha1str)
-            {
-                sb.Append(item.ToString("x2"));
-            }
-   
-            if (sb.ToString().Equals(signature, StringComparison.CurrentCultureIgnoreCase))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
-        }
     }
 }
