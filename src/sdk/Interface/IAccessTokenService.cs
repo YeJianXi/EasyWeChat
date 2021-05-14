@@ -23,6 +23,6 @@ namespace EasyWeChat.Interface
         /// </summary>
         /// <param name="accessToken"></param>
         /// <returns></returns>
-       Task<GetTicketResponse> GetTicket(string accessToken)
+        Task<GetTicketResponse> GetTicket(string accessToken);
     }
 }

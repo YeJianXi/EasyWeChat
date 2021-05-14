@@ -7,7 +7,7 @@
     <PackageId>WeChatSDK</PackageId>
     <Product>WeChatSDK</Product>
     <Description>一个封装了微信公众号平台各类接口的SDk</Description>
-    <RootNamespace>EastWeChat</RootNamespace>
+    <RootNamespace>EasyWeChat</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
