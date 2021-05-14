@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\sxb\\product\\scr\\Tools\\ProductManagement.Tool.WeChat\\ProductManagement.Tool.WeChat.csproj": {}
+    "D:\\code\\github\\EasyWeChat\\src\\sdk\\ProductManagement.Tool.WeChat.csproj": {}
   },
   "projects": {
-    "D:\\code\\sxb\\product\\scr\\Tools\\ProductManagement.Tool.WeChat\\ProductManagement.Tool.WeChat.csproj": {
+    "D:\\code\\github\\EasyWeChat\\src\\sdk\\ProductManagement.Tool.WeChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\sxb\\product\\scr\\Tools\\ProductManagement.Tool.WeChat\\ProductManagement.Tool.WeChat.csproj",
+        "projectUniqueName": "D:\\code\\github\\EasyWeChat\\src\\sdk\\ProductManagement.Tool.WeChat.csproj",
         "projectName": "ProductManagement.Tool.WeChat",
-        "projectPath": "D:\\code\\sxb\\product\\scr\\Tools\\ProductManagement.Tool.WeChat\\ProductManagement.Tool.WeChat.csproj",
+        "projectPath": "D:\\code\\github\\EasyWeChat\\src\\sdk\\ProductManagement.Tool.WeChat.csproj",
         "packagesPath": "C:\\Users\\James\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\sxb\\product\\scr\\Tools\\ProductManagement.Tool.WeChat\\obj\\",
+        "outputPath": "D:\\code\\github\\EasyWeChat\\src\\sdk\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\James\\AppData\\Roaming\\NuGet\\NuGet.Config",

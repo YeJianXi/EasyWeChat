@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "h7OB5cC8xoEPX/UVBgohPAIzAm+gZ/72GyGDvpfcqbAdiPymm1+Za7UD+4hdbUTIMvmGRIzAZ7P3QcLtYhLeng==",
+  "dgSpecHash": "1SJ5iZZSzlhM63JCFj+4WjOY5S1g5HkQFiUXIL3DCxtIik6oTff50uE/6j/VyMNQCtuGUg4pmmSrSXZX6Ajc0A==",
   "success": true,
   "projectFilePath": "D:\\code\\github\\EasyWeChat\\Test\\Test.csproj",
   "expectedPackageFiles": [
@@ -100,8 +100,7 @@
     "C:\\Users\\James\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\James\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\James\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\James\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\James\\.nuget\\packages\\wechatsdk\\1.0.0\\wechatsdk.1.0.0.nupkg.sha512"
+    "C:\\Users\\James\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

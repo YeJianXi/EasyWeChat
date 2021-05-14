@@ -924,7 +924,7 @@
     "C:\\Users\\James\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "3.1.0",
     "restore": {
       "projectUniqueName": "D:\\code\\github\\EasyWeChat\\src\\sdk\\sdk.csproj",
       "projectName": "WeChatSDK",
