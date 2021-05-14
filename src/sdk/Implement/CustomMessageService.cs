@@ -13,11 +13,11 @@ namespace EasyWeChat.Implement
     using Interface;
     using Microsoft.Extensions.Logging;
 
-    public  class CustomMessageService: ICustomMessageService
+    public  class CustomMessageService:WeiXinApiBaseService, ICustomMessageService
     {
 
         ILogger _logger;
-        public CustomMessageService(ILogger<CustomMessageService> logger)
+        public CustomMessageService(IHttpClientFactory clientFactory,ILogger<CustomMessageService> logger):base(clientFactory)
         {
             _logger = logger;
         }
@@ -25,14 +25,13 @@ namespace EasyWeChat.Implement
         public virtual async Task<bool> Send(string token,string touser, CustomMessage message)
         {
 
-            using (HttpClient client = new HttpClient())
-            {
+
                 try
                 {
                     string url = $@"https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token={token}";
 
                     HttpContent content = new StringContent(message.ToJson());
-                    string result = await client.PostAsync(url, content, _logger);
+                    string result = await _client.PostAsync(url, content, _logger);
                     if (string.IsNullOrEmpty(result)) {
                         return false;
                     }
@@ -51,7 +50,6 @@ namespace EasyWeChat.Implement
                 {
                     return false;
                 }
-            }
 
         }
     }

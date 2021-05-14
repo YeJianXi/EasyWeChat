@@ -12,15 +12,11 @@ namespace EasyWeChat.Implement
     using Interface;
 
 
-    public class AccessTokenService: IAccessTokenService
+    public class AccessTokenService:WeiXinApiBaseService, IAccessTokenService
     {
-
-        HttpClient _client;
-        Timer getTokenTimer;
         ILogger _logger;
-        public AccessTokenService(HttpClient client, ILogger logger)
+        public AccessTokenService(IHttpClientFactory clientFactory, ILogger<AccessTokenService> logger):base(clientFactory)
         {
-            this._client = client;
             _logger = logger;
         }
 

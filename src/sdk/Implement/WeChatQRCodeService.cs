@@ -15,14 +15,12 @@ using Newtonsoft.Json.Linq;
 namespace EasyWeChat.Implement
 {
 
-    public class WeChatQRCodeService : IWeChatQRCodeService
+    public class WeChatQRCodeService :WeiXinApiBaseService ,IWeChatQRCodeService
     {
-        HttpClient _client;
         ILogger _logger;
 
-        public WeChatQRCodeService(HttpClient client, ILogger<WeChatQRCodeService> logger)
+        public WeChatQRCodeService(IHttpClientFactory clientFactory , ILogger<WeChatQRCodeService> logger):base(clientFactory)
         {
-            _client = client;
             _logger = logger;
         }
 

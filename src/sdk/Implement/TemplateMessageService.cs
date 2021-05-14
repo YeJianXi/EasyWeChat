@@ -11,13 +11,11 @@ using EasyWeChat.Model;
 
 namespace EasyWeChat.Implement
 {
-    public class TemplateMessageService: ITemplateMessageService
+    public class TemplateMessageService: WeiXinApiBaseService, ITemplateMessageService
     {
-        HttpClient _client;
         ILogger _logger;
-        public TemplateMessageService(HttpClient client,ILogger<TemplateMessageService> logger)
+        public TemplateMessageService(IHttpClientFactory clientFactory ,ILogger<TemplateMessageService> logger):base(clientFactory)
         {
-            this._client = client;
             this._logger = logger;
 
         }
