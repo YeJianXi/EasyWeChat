@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WeChat.Model
+namespace EasyWeChat.Model
 {
     /// <summary>
     /// 临时二维码请求参数

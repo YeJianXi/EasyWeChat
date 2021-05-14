@@ -5,14 +5,14 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using WeChat.Interface;
-using WeChat.Model;
+using EasyWeChat.Interface;
+using EasyWeChat.Model;
 using Newtonsoft.Json;
 using System.IO;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json.Linq;
 
-namespace WeChat.Implement
+namespace EasyWeChat.Implement
 {
 
     public class WeChatQRCodeService : IWeChatQRCodeService

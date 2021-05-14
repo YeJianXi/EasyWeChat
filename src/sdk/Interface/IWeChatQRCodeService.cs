@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using WeChat.Model;
+using EasyWeChat.Model;
 
-namespace WeChat.Interface
+namespace EasyWeChat.Interface
 {
     public interface IWeChatQRCodeService
     {

@@ -6,10 +6,10 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using WeChat.Interface;
-using WeChat.Model;
+using EasyWeChat.Interface;
+using EasyWeChat.Model;
 
-namespace WeChat.Implement
+namespace EasyWeChat.Implement
 {
     public class TemplateMessageService: ITemplateMessageService
     {

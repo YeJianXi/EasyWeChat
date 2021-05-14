@@ -4,9 +4,9 @@ using Polly;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using WeChat;
-using WeChat.Implement;
-using WeChat.Interface;
+using EasyWeChat;
+using EasyWeChat.Implement;
+using EasyWeChat.Interface;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

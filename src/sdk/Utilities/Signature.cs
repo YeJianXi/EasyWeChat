@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
-using WeChat.Model;
+using EasyWeChat.Model;
 
-namespace WeChat.Utilities
+namespace EasyWeChat.Utilities
 {
     public class Signature
     {
