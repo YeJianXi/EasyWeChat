@@ -1,0 +1,9 @@
+D:\code\sxb\product\scr\Tools\ProductManagement.Tool.WeChat\bin\release\netstandard2.0\ProductManagement.Tool.WeChat.deps.json
+D:\code\sxb\product\scr\Tools\ProductManagement.Tool.WeChat\bin\release\netstandard2.0\ProductManagement.Tool.WeChat.dll
+D:\code\sxb\product\scr\Tools\ProductManagement.Tool.WeChat\bin\release\netstandard2.0\ProductManagement.Tool.WeChat.pdb
+D:\code\sxb\product\scr\Tools\ProductManagement.Tool.WeChat\obj\release\netstandard2.0\ProductManagement.Tool.WeChat.csprojAssemblyReference.cache
+D:\code\sxb\product\scr\Tools\ProductManagement.Tool.WeChat\obj\release\netstandard2.0\ProductManagement.Tool.WeChat.AssemblyInfoInputs.cache
+D:\code\sxb\product\scr\Tools\ProductManagement.Tool.WeChat\obj\release\netstandard2.0\ProductManagement.Tool.WeChat.AssemblyInfo.cs
+D:\code\sxb\product\scr\Tools\ProductManagement.Tool.WeChat\obj\release\netstandard2.0\ProductManagement.Tool.WeChat.csproj.CoreCompileInputs.cache
+D:\code\sxb\product\scr\Tools\ProductManagement.Tool.WeChat\obj\release\netstandard2.0\ProductManagement.Tool.WeChat.dll
+D:\code\sxb\product\scr\Tools\ProductManagement.Tool.WeChat\obj\release\netstandard2.0\ProductManagement.Tool.WeChat.pdb

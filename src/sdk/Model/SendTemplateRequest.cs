@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 
@@ -22,7 +21,7 @@ namespace WeChat.Model
         /// <summary>
         /// 参数值显示的颜色
         /// </summary>
-        public Color Color { get; set; }
+        public string Color { get; set; }
 
     }
     public class SendTemplateRequest
@@ -85,13 +84,14 @@ namespace WeChat.Model
                 dataDic[filed.Filed] = new
                 {
                     value = filed.Value,
-                    color = filed.Color.ToRGB()
+                    color = filed.Color
                 };
             }
         }
 
         internal string ToJson()
         {
+            
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(root);
             return json;
         }

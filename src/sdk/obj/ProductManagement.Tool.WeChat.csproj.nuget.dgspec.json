@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\github\\EasyWeChat\\src\\sdk\\sdk.csproj": {}
+    "D:\\code\\sxb\\product\\scr\\Tools\\ProductManagement.Tool.WeChat\\ProductManagement.Tool.WeChat.csproj": {}
   },
   "projects": {
-    "D:\\code\\github\\EasyWeChat\\src\\sdk\\sdk.csproj": {
+    "D:\\code\\sxb\\product\\scr\\Tools\\ProductManagement.Tool.WeChat\\ProductManagement.Tool.WeChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\github\\EasyWeChat\\src\\sdk\\sdk.csproj",
-        "projectName": "WeChatSDK",
-        "projectPath": "D:\\code\\github\\EasyWeChat\\src\\sdk\\sdk.csproj",
+        "projectUniqueName": "D:\\code\\sxb\\product\\scr\\Tools\\ProductManagement.Tool.WeChat\\ProductManagement.Tool.WeChat.csproj",
+        "projectName": "ProductManagement.Tool.WeChat",
+        "projectPath": "D:\\code\\sxb\\product\\scr\\Tools\\ProductManagement.Tool.WeChat\\ProductManagement.Tool.WeChat.csproj",
         "packagesPath": "C:\\Users\\James\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\github\\EasyWeChat\\src\\sdk\\obj\\",
+        "outputPath": "D:\\code\\sxb\\product\\scr\\Tools\\ProductManagement.Tool.WeChat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\James\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,17 +41,13 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
-            "Microsoft.Extensions.DependencyInjection": {
+            "Microsoft.Extensions.Hosting.Abstractions": {
               "target": "Package",
               "version": "[3.1.0, )"
             },
             "Microsoft.Extensions.Http.Polly": {
               "target": "Package",
-              "version": "[3.1.0, )"
-            },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.1.2, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
