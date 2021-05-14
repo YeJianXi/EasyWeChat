@@ -8,17 +8,13 @@ using System.Threading.Tasks;
 namespace Test
 {
     [TestClass]
-    public class IAccessTokenServiceTest
+    public class IAccessTokenServiceTest:BaseTest
     {
         [TestMethod]
         public async Task Test_GetToken()
         {
-            string appid = "wx0fc4ee9e61fbabd6", secret = "759081f722cdc7205b294db83b6b9937";
-            ServiceCollection services = new ServiceCollection();
-            services.AddEasyWeChat();
-            IServiceProvider sp = services.BuildServiceProvider();
-            IAccessTokenService accessTokenService = sp.GetService<IAccessTokenService>();
-            var result =  await accessTokenService.GetToken(appid, secret);
+            IAccessTokenService accessTokenService = _sp.GetService<IAccessTokenService>();
+            var result =  await accessTokenService.GetToken(Config.AppId, Config.AppSecret);
             Assert.IsNotNull(result);
             Assert.IsNotNull(result.access_token);
 
@@ -27,12 +23,8 @@ namespace Test
         [TestMethod]
         public async Task Test_GetTicket()
         {
-            string appid = "wx0fc4ee9e61fbabd6", secret = "759081f722cdc7205b294db83b6b9937";
-            ServiceCollection services = new ServiceCollection();
-            services.AddEasyWeChat();
-            IServiceProvider sp = services.BuildServiceProvider();
-            IAccessTokenService accessTokenService = sp.GetService<IAccessTokenService>();
-            var tokenResult = await accessTokenService.GetToken(appid, secret);
+            IAccessTokenService accessTokenService = _sp.GetService<IAccessTokenService>();
+            var tokenResult = await accessTokenService.GetToken(Config.AppId, Config.AppSecret);
             var ticketResult = await accessTokenService.GetTicket(tokenResult.access_token);
             Assert.IsNotNull(ticketResult);
             Assert.IsNotNull(ticketResult.ticket);
