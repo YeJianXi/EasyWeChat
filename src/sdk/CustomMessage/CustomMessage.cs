@@ -14,7 +14,7 @@ namespace EasyWeChat.CustomMessage
 
         protected IDictionary<string, object> postData = new Dictionary<string, object>();
 
-        public void SetToUser(string toUser)
+        internal void SetToUser(string toUser)
         {
             postData.Add("touser", toUser);
         }

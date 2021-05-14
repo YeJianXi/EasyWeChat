@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 namespace EasyWeChat.Interface
 {
     using CustomMessage;
+    using EasyWeChat.Model;
+
     public interface ICustomMessageService
     {
-        Task<bool> Send(string token, string touser, CustomMessage message);
-     }
+        Task<Result> SendAsync(string token, string touser, CustomMessage message);
+
+        Result Send(string token, string touser, CustomMessage message);
+    }
 }

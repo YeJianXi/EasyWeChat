@@ -86,6 +86,8 @@ namespace System.Net.Http
             HttpResponseMessage httpResponseMessage = null;
             try
             {
+
+                HttpRequestMessage message = new HttpRequestMessage();
                 var response = await client.PostAsync(requestUri, content);
                 httpResponseMessage = response.EnsureSuccessStatusCode();
                 string body = await response.Content.ReadAsStringAsync();

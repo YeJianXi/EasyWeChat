@@ -35,9 +35,9 @@ namespace EasyWeChat.CustomMessage
             news["articles"][0].Add("url", url);
         }
 
-        public void picurl(string picUrl)
+        public void SetPicUrl(string picUrl)
         {
-            news["articles"][0].Add("picUrl", picUrl);
+            news["articles"][0].Add("picurl", picUrl);
         }
 
     }
