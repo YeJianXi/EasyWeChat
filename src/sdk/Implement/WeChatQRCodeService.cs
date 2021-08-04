@@ -33,6 +33,16 @@ namespace EasyWeChat.Implement
             return await _client.PostAsync<CreateQRCodeResponse>(url, content, _logger);
         }
 
+
+        public async Task<CreateQRCodeResponse> GenerateLimitQRCode<TSceneType>(string accessToken, CreateLimitQRCodeRequest<TSceneType> request)
+        {
+            string url = $"https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token={accessToken}";
+
+            HttpContent content = new StringContent(request.ToJson());
+
+            return await _client.PostAsync<CreateQRCodeResponse>(url, content, _logger);
+        }
+
         public async Task<GetWXAcodeUnlimitResult> GetWXAcodeUnlimit(string accessToken, GetWXAcodeUnlimitRequest request)
         {
             string url = $"https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token={accessToken}";

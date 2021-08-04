@@ -24,7 +24,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddTransient<LogHandler>();
             services.AddHttpClient(Config.HttpClientName)
                 .AddHttpMessageHandler<LogHandler>()
-                .SetHandlerLifetime(TimeSpan.FromHours(10000))
+                .SetHandlerLifetime(TimeSpan.FromHours(1000))
                 .AddPolicyHandler(request =>  Policy.TimeoutAsync<HttpResponseMessage>(30))
                 .AddTransientHttpErrorPolicy(b => b.WaitAndRetryAsync(new[] {
                     TimeSpan.FromSeconds(1),

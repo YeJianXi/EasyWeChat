@@ -36,6 +36,31 @@ namespace Test
             Assert.IsFalse(string.IsNullOrEmpty(result.ticket));
 
         }
+
+
+        [TestMethod]
+        public async Task Test_GenerateLimitQRCodeInt()
+        {
+            IWeChatQRCodeService weChatQRCodeService = _sp.GetService<IWeChatQRCodeService>();
+            var request = new CreateLimitQRIntCodeRequest();
+            request.SetScene(1);
+            var result = await weChatQRCodeService.GenerateLimitQRCode(await GetAccessToken(), request);
+            Assert.IsNotNull(result);
+            Assert.IsFalse(string.IsNullOrEmpty(result.ticket));
+
+        }
+        [TestMethod]
+        public async Task Test_GenerateLimitQRCodeStr()
+        {
+            IWeChatQRCodeService weChatQRCodeService = _sp.GetService<IWeChatQRCodeService>();
+            var request = new CreateLimitQRStrCodeRequest();
+            request.SetScene("1");
+            var result = await weChatQRCodeService.GenerateLimitQRCode(await GetAccessToken(), request);
+            Assert.IsNotNull(result);
+            Assert.IsFalse(string.IsNullOrEmpty(result.ticket));
+
+        }
+
         [TestMethod]
         public async Task Test_GetWXAcodeUnlimit()
         {
