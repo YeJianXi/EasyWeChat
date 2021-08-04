@@ -5,6 +5,7 @@
 ##### 标题5
 ###### 标题6 -->
 
+## 项目地址：https://github.com/YeJianXi/EasyWeChat#qq1039032965phone18218943980
 ## 微信公众平台接口封装
 ### 作者：James
 ### 联系方式：
