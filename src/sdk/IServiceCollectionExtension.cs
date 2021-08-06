@@ -46,7 +46,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
 
 
-
+        [Obsolete("已抛弃，请使用[AddEasyWeChat]")]
         public static void AddWeChatQRCodeService(this IServiceCollection services)
         {
             services.AddHttpClient<IWeChatQRCodeService, WeChatQRCodeService>()
