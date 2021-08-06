@@ -34,7 +34,7 @@ namespace EasyWeChat.Implement
                 string url = $@"https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token={token}";
                 message.SetToUser(touser);
                 string msgJson = message.ToJson();
-                HttpContent content = new StringContent(msgJson);
+                HttpContent content = new StringContent(msgJson,Encoding.UTF8,"application/json");
                 string result = await _client.PostAsync(url, content, _logger);
                 if (string.IsNullOrEmpty(result))
                 {
